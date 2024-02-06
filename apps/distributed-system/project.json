@@ -1,0 +1,24 @@
+{
+  "name": "distributed-system",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/distributed-system/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "distributed-system:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "distributed-system:build:development"
+        },
+        "production": {
+          "buildTarget": "distributed-system:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
