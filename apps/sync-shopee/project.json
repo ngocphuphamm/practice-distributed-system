@@ -1,0 +1,24 @@
+{
+  "name": "sync-shopee",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sync-shopee/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sync-shopee:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sync-shopee:build:development"
+        },
+        "production": {
+          "buildTarget": "sync-shopee:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

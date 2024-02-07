@@ -1,9 +1,11 @@
 const { NxWebpackPlugin } = require('@nx/webpack');
-const { join } = require('path');
+const path = require('path');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+
   output: {
-    path: join(__dirname, '../../dist/apps/distributed-system'),
+    path: path.join(__dirname, '../../dist/apps/shopee-api'),
   },
   plugins: [
     new NxWebpackPlugin({
@@ -14,6 +16,9 @@ module.exports = {
       assets: ['./src/assets'],
       optimization: false,
       outputHashing: 'none',
+    }),
+    new CopyPlugin({
+      patterns: [{ from: `${path.resolve(__dirname)}/routes-config`, to: 'routes-config' }],
     }),
   ],
 };

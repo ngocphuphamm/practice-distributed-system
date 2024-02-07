@@ -1,21 +1,21 @@
 {
-  "name": "distributed-system",
+  "name": "shopee-api",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/distributed-system/src",
+  "sourceRoot": "apps/shopee-api/src",
   "projectType": "application",
   "targets": {
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "distributed-system:build"
+        "buildTarget": "shopee-api:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "distributed-system:build:development"
+          "buildTarget": "shopee-api:build:development"
         },
         "production": {
-          "buildTarget": "distributed-system:build:production"
+          "buildTarget": "shopee-api:build:production"
         }
       }
     }
